@@ -15,7 +15,10 @@
           <a href="/member/login">login</a>
         </li>
         <li th:if="${session.user != null}">
-          <a href="/member/myPage">myPage</a>
+        <div th:if="${session.user.profile}" class="userprofile">
+        	<a href="/member/myPage"><img th:src="@{'/image/' + ${session.user.profile}}" /></a>
+				</div>
+        <a href="/member/myPage" th:text="${session.user.nick + '님'}">myPage</a>
         </li>
       </ul>
       

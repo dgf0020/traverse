@@ -57,12 +57,18 @@ header > div ul.navi {
 header > div ul.navi > li {
    font-size: 12px;
    display: inline-block;
+   display: flex; /* 플렉스박스 사용 */
+   align-items: center; /* 세로 가운데 정렬 */
 }
 
 header > div ul.navi > li > a {
    display: block;
    width: auto;
    padding: 20px;
+}
+
+.navi a {
+	font-size: 16px;
 }
 
 .area_desc {
@@ -220,6 +226,15 @@ input#menuicon:checked ~ .background {
 .sidebar a:hover {
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	transition: all 0.3s ease;
+}
+
+.userprofile img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover; /* 이미지가 비율을 유지하면서 컨테이너에 맞춰짐 */
+    object-position: center; /* 이미지의 중앙 부분이 표시되도록 설정 */
+	
 }
 
 
